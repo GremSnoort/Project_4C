@@ -20,12 +20,6 @@ class SplashActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val mWebView = findViewById<WebView>(R.id.webview)
-
-        //mWebView.loadUrl("file:///android_res/drawable/android.gif")
-        mWebView.setBackgroundColor(Color.TRANSPARENT)
-        mWebView.setPadding(0, 0, 0, 0)
-
         val rand_choice = (0..4).random()
         var Id: Int = R.anim.myalpha
         if (rand_choice==0)
