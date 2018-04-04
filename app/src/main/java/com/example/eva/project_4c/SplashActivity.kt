@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import kotlin.concurrent.thread
 import android.webkit.WebView
 
@@ -15,13 +17,13 @@ class SplashActivity : Activity() {
         setContentView(R.layout.activity_splash)
 
         val mWebView = findViewById<WebView>(R.id.webview)
-        //mWebView.loadUrl("https://i.gifer.com/WG94.gif")
 
+        //mWebView.loadUrl("file:///android_res/drawable/android.gif")
         mWebView.setBackgroundColor(Color.TRANSPARENT)
         mWebView.setPadding(0, 0, 0, 0)
 
-        mWebView.loadUrl("http://netsources.narod.ru/friday/alkocat.jpg");
-
+        val anim = object : Animation()
+        anim = AnimationUtils.loadAnimation(this,
 
 
         val myThread = object : Thread() {
